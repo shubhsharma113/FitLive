@@ -35,8 +35,8 @@ const Register = () => {
         <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-slate-50">
             <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
                 <div className="flex flex-col items-center">
-                    <div className="bg-blue-100 p-3 rounded-full mb-4">
-                        <Dumbbell className="h-10 w-10 text-blue-600" />
+                    <div className="bg-brand-orange p-3 rounded-full mb-4">
+                        <Dumbbell className="h-10 w-10 text-brand-orange" />
                     </div>
                     <h2 className="text-center text-3xl font-extrabold text-slate-900 tracking-tight">
                         Join SmartGym
@@ -102,7 +102,7 @@ const Register = () => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors disabled:opacity-50"
+                            className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-brand-orange hover:bg-brand-orange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange transition-colors disabled:opacity-50"
                         >
                             {isLoading ? 'Creating account...' : 'Create account'}
                         </button>
@@ -110,7 +110,7 @@ const Register = () => {
                     
                     <div className="text-center text-sm">
                         <span className="text-slate-600">Already have an account? </span>
-                        <Link to="/login" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
+                        <Link to="/login" className="font-medium text-brand-orange hover:text-brand-orange transition-colors">
                             Log in here
                         </Link>
                     </div>

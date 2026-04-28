@@ -61,7 +61,7 @@ const GymFinder = () => {
         }
     };
 
-    if (!isLoaded) return <div className="flex justify-center p-20"><Loader2 className="animate-spin h-10 w-10 text-blue-500" /></div>;
+    if (!isLoaded) return <div className="flex justify-center p-20"><Loader2 className="animate-spin h-10 w-10 text-brand-orange" /></div>;
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -81,7 +81,7 @@ const GymFinder = () => {
                 
                 {loading && !errorMsg ? (
                     <div className="h-[600px] flex flex-col items-center justify-center bg-slate-50 rounded-xl">
-                        <Loader2 className="animate-spin h-10 w-10 text-blue-500 mb-4" />
+                        <Loader2 className="animate-spin h-10 w-10 text-brand-orange mb-4" />
                         <p className="text-slate-500">Locating you and searching for nearby gyms...</p>
                     </div>
                 ) : (userLocation && (
@@ -136,9 +136,9 @@ const GymFinder = () => {
                 ))}
             </div>
             
-            <div className="mt-8 bg-blue-50 border border-blue-100 rounded-xl p-6">
-                <h3 className="font-bold text-blue-900 mb-2">Note to Evaluator</h3>
-                <p className="text-blue-800 text-sm">To see the map, you need to add your <b>Google Maps/Places API Key</b> to the frontend <code className="bg-blue-100 px-1 rounded">.env</code> (as <code className="bg-blue-100 px-1 rounded">VITE_GOOGLE_MAPS_API_KEY</code>) and backend <code className="bg-blue-100 px-1 rounded">.env</code> (as <code className="bg-blue-100 px-1 rounded">GOOGLE_MAPS_API_KEY</code>). Currently using standard browser Geolocation to fetch coordinates, then securely proxying the Places API Search request via the backend port 5000.</p>
+            <div className="mt-8 bg-brand-orange border border-brand-orange rounded-xl p-6">
+                <h3 className="font-bold text-brand-orange mb-2">Note to Evaluator</h3>
+                <p className="text-brand-orange text-sm">To see the map, you need to add your <b>Google Maps/Places API Key</b> to the frontend <code className="bg-brand-orange px-1 rounded">.env</code> (as <code className="bg-brand-orange px-1 rounded">VITE_GOOGLE_MAPS_API_KEY</code>) and backend <code className="bg-brand-orange px-1 rounded">.env</code> (as <code className="bg-brand-orange px-1 rounded">GOOGLE_MAPS_API_KEY</code>). Currently using standard browser Geolocation to fetch coordinates, then securely proxying the Places API Search request via the backend port 5000.</p>
             </div>
         </div>
     );

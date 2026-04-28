@@ -67,7 +67,7 @@ const AdminDashboard = () => {
                 {/* Users List */}
                 <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden h-[600px] flex flex-col">
                     <div className="p-6 border-b border-slate-200 bg-slate-50 flex items-center gap-2">
-                        <Users className="text-blue-500" />
+                        <Users className="text-brand-orange" />
                         <h3 className="text-xl font-bold text-slate-800">Platform Users ({users.length})</h3>
                     </div>
                     <div className="overflow-y-auto flex-grow p-4">
@@ -78,7 +78,7 @@ const AdminDashboard = () => {
                                         <p className="font-semibold text-slate-900">{u.name}</p>
                                         <p className="text-sm text-slate-500">{u.email}</p>
                                     </div>
-                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${u.role === 'admin' ? 'bg-amber-100 text-amber-800' : 'bg-blue-100 text-blue-800'}`}>
+                                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${u.role === 'admin' ? 'bg-amber-100 text-amber-800' : 'bg-brand-orange text-brand-orange'}`}>
                                         {u.role.toUpperCase()}
                                     </span>
                                 </div>

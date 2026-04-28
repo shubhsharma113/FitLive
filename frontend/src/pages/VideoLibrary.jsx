@@ -27,15 +27,15 @@ const RepCounterTimer = () => {
 
     return (
         <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-xl border border-slate-800 flex flex-col items-center">
-            <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><ActivitySquare className="text-blue-400"/> Rep & Timer Tool</h3>
+            <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><ActivitySquare className="text-brand-orange"/> Rep & Timer Tool</h3>
             
             <div className="grid grid-cols-2 gap-8 w-full mb-8">
                 <div className="flex flex-col items-center bg-slate-800 py-6 rounded-xl border border-slate-700">
                     <span className="text-slate-400 text-sm mb-2 uppercase tracking-wider font-bold">Reps</span>
-                    <span className="text-5xl font-extrabold text-blue-400 leading-none">{reps}</span>
+                    <span className="text-5xl font-extrabold text-brand-orange leading-none">{reps}</span>
                     <div className="flex gap-2 mt-4">
                         <button onClick={() => setReps(r => Math.max(0, r - 1))} className="bg-slate-700 hover:bg-slate-600 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl transition-colors">-</button>
-                        <button onClick={() => setReps(r => r + 1)} className="bg-blue-600 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl transition-colors shadow-lg shadow-blue-500/20">+</button>
+                        <button onClick={() => setReps(r => r + 1)} className="bg-brand-orange hover:bg-brand-orange w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl transition-colors shadow-lg shadow-brand-orange/20">+</button>
                     </div>
                 </div>
                 
@@ -95,7 +95,7 @@ const VideoLibrary = () => {
                 <div className="lg:w-2/3">
                     <div className="mb-8 border-b border-slate-200 pb-5">
                         <h1 className="text-3xl font-bold text-slate-900 flex items-center gap-2">
-                            <PlaySquare className="text-blue-600" /> Video Library
+                            <PlaySquare className="text-brand-orange" /> Video Library
                         </h1>
                         <p className="text-slate-500 mt-1">Guided workouts for every fitness level.</p>
                     </div>
@@ -119,7 +119,7 @@ const VideoLibrary = () => {
                                      <img src={video.thumbnailUrl} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                      <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
                                          <div className="bg-white/90 backdrop-blur-sm w-12 h-12 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity transform scale-75 group-hover:scale-100">
-                                            <PlaySquare className="text-blue-600 ml-1" size={24} />
+                                            <PlaySquare className="text-brand-orange ml-1" size={24} />
                                          </div>
                                      </div>
                                      <div className="absolute bottom-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1">
@@ -129,7 +129,7 @@ const VideoLibrary = () => {
                                 <div className="p-5">
                                     <h3 className="font-bold text-lg text-slate-900 mb-2 truncate">{video.title}</h3>
                                     <div className="flex items-center justify-between mt-2">
-                                        <span className="bg-blue-50 text-blue-700 text-xs px-2.5 py-1 rounded-full font-medium border border-blue-100 capitalize">
+                                        <span className="bg-brand-orange text-black text-xs px-2.5 py-1 rounded-full font-medium border border-brand-orange capitalize">
                                             {video.category}
                                         </span>
                                         <span className={`text-xs px-2.5 py-1 text-slate-700 rounded-full font-medium border capitalize ${video.difficulty === 'beginner' ? 'bg-emerald-50 border-emerald-100 text-emerald-700' : video.difficulty === 'advanced' ? 'bg-red-50 border-red-100 text-red-700' : 'bg-amber-50 border-amber-100 text-amber-700'}`}>

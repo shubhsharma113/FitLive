@@ -6,14 +6,14 @@ const axios = require('axios');
 const generatePlan = async (req, res) => {
     const { age, weight, height, goal, fitnessLevel } = req.body;
 
-    const prompt = `Act as an expert fitness trainer and nutritionist. Generate a structured weekly workout and diet plan for a user with the following profile:
+    const prompt = `Act as an expert fitness trainer, nutritionist, and Ayurvedic practitioner. Generate a structured weekly workout and diet plan for a user with the following profile:
 - Age: ${age}
 - Weight: ${weight} kg
 - Height: ${height} cm
 - Goal: ${goal}
 - Fitness Level: ${fitnessLevel || 'Beginner'}
     
-Format the response clearly with bullet points, using a "Workout Plan" section and a "Diet Plan" section. Ensure it is motivating and safe.`;
+Format the response clearly with bullet points, using a "Workout Plan" section, a "Diet Plan" section, and an "Ayurvedic Suggestions" section. Include specific Ayurvedic herbs, practices, or dietary guidelines tailored to their goal. Ensure it is motivating and safe.`;
 
     try {
         const response = await axios.post(

@@ -48,7 +48,7 @@ const Dashboard = () => {
         }
     };
 
-    if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin h-10 w-10 text-blue-500" /></div>;
+    if (loading) return <div className="flex justify-center p-20"><Loader2 className="animate-spin h-10 w-10 text-brand-orange" /></div>;
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -63,13 +63,13 @@ const Dashboard = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <div className="card bg-gradient-to-br from-blue-500 to-indigo-600 text-white border-none">
+                <div className="card bg-gradient-to-br from-brand-orange to-indigo-600 text-white border-none">
                     <div className="flex justify-between items-start">
                         <div>
-                            <p className="text-blue-100 mb-1">Current Weight</p>
+                            <p className="text-brand-orange mb-1">Current Weight</p>
                             <h2 className="text-4xl font-bold">{progressLogs[0]?.weight || '--'} kg</h2>
                         </div>
-                        <Activity className="h-8 w-8 text-blue-200 opacity-50" />
+                        <Activity className="h-8 w-8 text-brand-orange opacity-50" />
                     </div>
                 </div>
                 <div className="card">
@@ -95,7 +95,7 @@ const Dashboard = () => {
             <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
                 <div className="p-6 border-b border-slate-200 flex justify-between items-center bg-slate-50">
                     <h3 className="text-xl font-bold text-slate-800">Progress History</h3>
-                    <button onClick={() => setShowLogModal(true)} className="flex items-center gap-1 text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                    <button onClick={() => setShowLogModal(true)} className="flex items-center gap-1 text-brand-orange font-medium hover:text-brand-orange transition-colors">
                         <Plus size={18} /> Add Log
                     </button>
                 </div>
@@ -110,8 +110,8 @@ const Dashboard = () => {
                                     <p className="text-sm text-slate-500 mt-1">{log.notes || 'No notes'}</p>
                                 </div>
                                 <div className="mt-2 sm:mt-0 flex gap-4 text-sm font-medium bg-white px-4 py-2 rounded-lg border border-slate-100 shadow-sm">
-                                    <span className="text-slate-700">Weight: <span className="text-blue-600">{log.weight}kg</span></span>
-                                    {log.bodyFatPercentage && <span className="text-slate-700">Fat: <span className="text-blue-600">{log.bodyFatPercentage}%</span></span>}
+                                    <span className="text-slate-700">Weight: <span className="text-brand-orange">{log.weight}kg</span></span>
+                                    {log.bodyFatPercentage && <span className="text-slate-700">Fat: <span className="text-brand-orange">{log.bodyFatPercentage}%</span></span>}
                                 </div>
                             </div>
                         ))
